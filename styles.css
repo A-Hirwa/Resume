@@ -58,7 +58,7 @@ header{
     align-items: flex-start;
     font-size: 24px;
     font-weight: 100;
-    background-color: grey;
+    background-color: rgb(128, 128, 128, 0.6);
     backdrop-filter: blur(10px);
 }
 .side-nav svg{
@@ -69,7 +69,7 @@ a{
 }
 
 a{
-    color: aliceblue;
+    color: #F8FFF4;
 }
 
 .bar{
@@ -91,6 +91,11 @@ header li:hover{
 .menu{
     display: none;
     transition: 0.15s;
+}
+
+header a:hover{
+    cursor: pointer;
+    border-bottom: 2px beige solid;
 }
 
 /* Home */
@@ -133,8 +138,7 @@ header li:hover{
     margin-top: 15px;
     width: 170px;
 }
-
-.menu:hover, .sidemenu:hover, #resume-button:hover{
+#resume-button:hover{
     cursor:pointer;
 }
 
@@ -204,6 +208,23 @@ header li:hover{
     animation: text-slide linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
+}
+
+#education h5{
+    margin-bottom:0%;
+}
+
+#education p{
+    margin: 0%;
+}
+
+#skill li, #experience li{
+    margin: 5% 0%;
+}
+
+#education p{
+    font-size: 80%;
+    margin: 0px;
 }
 
 /* Projects */
@@ -330,6 +351,7 @@ form{
 
 .accounts{
     font-size: 50%;
+    transition: 0.3s ease;
 }
 
 #socials p{
@@ -338,6 +360,7 @@ form{
 
 .accounts:hover{
     cursor: pointer;
+    color: grey;
 }
 
 /* footer */
