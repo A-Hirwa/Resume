@@ -171,6 +171,51 @@ header a:hover{
     font-size: 80%;
 }
 
+#group, #education div, #experience div{
+    background-color: #eaf9d9e0;
+    color: #03191e;
+    width: 100%;
+    border-radius: 20px;
+    animation: text-slide linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+#group{
+    padding: 3%;
+}
+
+.language img{
+    width: 50px;
+    height: 50px;
+    background-color: none;
+}
+
+.language{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    margin: 5px;
+}
+
+#all-lang{
+    display: flex;
+    flex-wrap: wrap;
+    height: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5%;
+    flex: 1;
+}
+
+.language div{
+    width: 30%;
+    height: 50%;
+    flex-wrap: wrap;
+}
+
+
 @keyframes appear{
     from{
         opacity: 0;
@@ -202,16 +247,9 @@ header a:hover{
     }
 }
 
-#skill div, #education div, #experience div{
-    background-color: rgb(234, 249, 217, 0.3);
-    width: 100%;
-    border-radius: 20px;
-    animation: text-slide linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
 
-#education h5{
+
+#education h4{
     margin-bottom:0%;
 }
 
@@ -268,7 +306,7 @@ header a:hover{
     backdrop-filter: blur(10px);
     border-radius: 10px;
     font-size: 80%;
-    padding: 5% 10%;
+    padding: 5% 5%;
     opacity: 0;
     }
 
