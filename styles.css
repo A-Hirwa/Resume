@@ -1,3 +1,4 @@
+/* Global styles */
 *{
     box-sizing:border-box;
 }
@@ -375,6 +376,7 @@ footer{
 
 
 @media(max-width: 800px){
+    /* styles for screens 800px or less */
     .hide{
         display: none;
     }
