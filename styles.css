@@ -166,36 +166,44 @@ header li:hover{
     font-size: 80%;
 }
 
-#skill svg{
-    background-color: rgb(255, 254, 255);
-    border-radius: 50%;
-    padding: 2%;
-}
-#education svg{
-    background-color: rgb(255, 254, 255);
-    border-radius: 50%;
-    padding: 2%;
-}
-#experience svg{
-    background-color: rgb(255, 254, 255);
-    border-radius: 50%;
-    padding: 2%;
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.3
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
 
-#skill div{
-    background-color: rgb(234, 249, 217, 0.3);
-    width: 100%;
-    border-radius: 20px;
+#skill svg, #education svg, #experience svg{
+    background-color: rgb(255, 254, 255);
+    border-radius: 50%;
+    padding: 2%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
 }
-#education div{
-    background-color: rgb(234, 249, 217, 0.3);
-    width: 100%;
-    border-radius: 20px;
+
+@keyframes text-slide{
+    from{
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
-#experience div{
+
+#skill div, #education div, #experience div{
     background-color: rgb(234, 249, 217, 0.3);
     width: 100%;
     border-radius: 20px;
+    animation: text-slide linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 /* Projects */
@@ -239,30 +247,37 @@ header li:hover{
     border-radius: 10px;
     font-size: 80%;
     padding: 5% 10%;
-    z-index: 1;
     opacity: 0;
-    visibility: hidden;
-    transform: translateY(50%); /* Start from below */
-    transition: transform 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 1.5s; 
-}
+    }
 
-/* When hovering over the div, show .cover */
-.collection div:hover .cover {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0); /* Move to normal position */
-    transition: transform 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 0s;
-}
-
-/* When hover is removed, slide it down again */
-.collection div .cover {
-    opacity: 0;
+.collection div:not(hover) .cover{
+    animation: slide-down 0.3s linear forwards;
     cursor: pointer;
-    visibility: hidden;
-    transform: translateY(50%);
-    transition: transform 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 1.5s; 
 }
-
+.collection div:hover .cover{
+    animation: slide-up 0.3s linear forwards;
+    cursor: pointer;
+}
+@keyframes slide-up{
+    from{
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes slide-down{
+    from{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(20%);
+    }
+}
 
 /* Contact */
 #Contact{
