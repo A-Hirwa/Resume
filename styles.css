@@ -94,7 +94,7 @@ header li:hover{
     transition: 0.15s;
 }
 
-header a:hover{
+header ul a:hover{
     cursor: pointer;
     border-bottom: 2px #EF8354 solid;
 }
