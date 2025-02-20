@@ -1,0 +1,382 @@
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: #F8FFF4;
+    margin: 0px;
+    background-color: #03191e;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    max-width: 100%;
+}
+
+#all{
+    display: flex;
+    flex-direction: column;
+}
+
+/* navigation */
+
+header{
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.navigation{
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    margin: 0px;
+    padding: 0px;
+    justify-content: flex-end;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.side-nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    display: none;
+    list-style: none;
+    gap: 50px;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 50px;
+    padding-top: 30px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 24px;
+    font-weight: 100;
+    background-color: grey;
+    backdrop-filter: blur(10px);
+}
+.side-nav svg{
+    margin-left: -30px;
+}
+a{
+    text-decoration: none;
+}
+
+a{
+    color: aliceblue;
+}
+
+.bar{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header li{
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+header li:hover{
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.menu{
+    display: none;
+    transition: 0.15s;
+}
+
+/* Home */
+#Home{
+    display: flex;
+    gap: 25%;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.bio{
+    margin-top: 20px;
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.image{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 0px;
+
+}
+
+#resume-button{
+    background-color: #EAF9D9;
+    border-radius: 20px;
+    border: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 70%;
+    padding: 10px 5%;
+    margin-top: 15px;
+    width: 170px;
+}
+
+.menu:hover, .sidemenu:hover, #resume-button:hover{
+    cursor:pointer;
+}
+
+#resume-button:hover{
+    background-color: rgb(3, 3, 3);
+    color: #EAF9D9;
+    border: 2px #EAF9D9 solid;
+}
+
+/* About */
+
+#About{
+    padding: 30px 15%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#About h3{
+    text-align: center;
+}
+
+#skill, #education, #experience{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    margin: 3%;
+    transition: transform 0.3s ease-out;
+    font-size: 80%;
+}
+
+#skill svg{
+    background-color: rgb(255, 254, 255);
+    border-radius: 50%;
+    padding: 2%;
+}
+#education svg{
+    background-color: rgb(255, 254, 255);
+    border-radius: 50%;
+    padding: 2%;
+}
+#experience svg{
+    background-color: rgb(255, 254, 255);
+    border-radius: 50%;
+    padding: 2%;
+}
+
+#skill div{
+    background-color: rgb(234, 249, 217, 0.3);
+    width: 100%;
+    border-radius: 20px;
+}
+#education div{
+    background-color: rgb(234, 249, 217, 0.3);
+    width: 100%;
+    border-radius: 20px;
+}
+#experience div{
+    background-color: rgb(234, 249, 217, 0.3);
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Projects */
+#Projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 3%;
+}
+
+.collection{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.collection img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.collection div{
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    background-color: rgba(125, 156, 156, 0.5); 
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    font-size: 80%;
+    padding: 5% 10%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50%); /* Start from below */
+    transition: transform 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 1.5s; 
+}
+
+/* When hovering over the div, show .cover */
+.collection div:hover .cover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Move to normal position */
+    transition: transform 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 0s;
+}
+
+/* When hover is removed, slide it down again */
+.collection div .cover {
+    opacity: 0;
+    cursor: pointer;
+    visibility: hidden;
+    transform: translateY(50%);
+    transition: transform 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 1.5s; 
+}
+
+
+/* Contact */
+#Contact{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10%;
+    padding: 30px 10%;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+textarea{
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    border-style: none;
+}
+
+#socials{
+    flex: 1 1 auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    flex: 1 1 auto;
+}
+
+#Submit{
+    background-color: rgb(3, 3, 3);
+    color: #EAF9D9;
+    border: 2px #EAF9D9 solid;
+    width: 160px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+#Submit:hover{
+    background-color: #EAF9D9;
+    color: rgb(13, 13, 14);
+}
+
+.accounts{
+    font-size: 50%;
+}
+
+#socials p{
+    font-size: 80%;
+}
+
+.accounts:hover{
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+    background-color: #d4d5d5d4;
+    text-align: center;
+    color: black;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 13px;
+}
+
+
+@media(max-width: 800px){
+    .hide{
+        display: none;
+    }
+    #About, #heading, #detail, #skill, #education, #experience, #Contact{
+        flex-wrap: wrap;
+    }
+    #Home{
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #skill, #education, #experience{
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        margin: 5%;
+        font-size: 70%;
+    }
+    #Projects{
+        align-items: center;
+    }
+    .collection{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #Contact{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    input, textarea{
+        width: 180%;
+    }
+    .menu{
+        display: block;
+    }
+
+    .bio p{
+        text-align: center;
+    }
+}
