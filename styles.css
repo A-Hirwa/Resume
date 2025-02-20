@@ -96,7 +96,7 @@ header li:hover{
 
 header a:hover{
     cursor: pointer;
-    border-bottom: 2px beige solid;
+    border-bottom: 2px #EF8354 solid;
 }
 
 /* Home */
