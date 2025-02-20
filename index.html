@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+        <div id="all">
+            <header class="bar">
+                <img src="images/Vector 1.png" alt="logo" width="41px" height="41px">
+                <ul class="side-nav">
+                    <li class="sidemenu" onclick="hidenav()"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="30px" fill="white"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></li>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li> <a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+                <ul class="navigation">
+                    <li class="hide"><a href="#Home">Home</a></li>
+                    <li class="hide"><a href="#About">About</a></li>
+                    <li class="hide"> <a href="#Projects">Projects</a></li>
+                    <li class="hide"><a href="#Contact">Contact</a></li>
+                    <li class="menu" onclick=shownav()><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+                </ul>
+            </header>
+            <main>
+                <div id="Home">
+                    <img src="images/profile.jfif" alt="profile picture" class="image">
+                    <div class="intro">
+                        <div class="bio">
+                            <p style="margin-bottom: 0px;">Hello, there! </p>
+                            <p style="margin-top: 0px;">My name is Hirwa Ariane, an aspiring software engineer. Let's connect!</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1z4JTy2xK0CKbs81fK6cQ1rWveneLYaNA/view?usp=sharing" target="_self"><button id="resume-button">Download Resume</button></a>
+                    </div>
+                    
+                </div>
+                <div id="About">
+                    <h3>About Me</h3>
+                    <div id="categories">
+                        <div id="skill">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20%" viewBox="0 -960 960 960" width="20%" fill="black"><path d="M240-120q-45 0-89-22t-71-58q26 0 53-20.5t27-59.5q0-50 35-85t85-35q50 0 85 35t35 85q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T320-280q0-17-11.5-28.5T280-320q-17 0-28.5 11.5T240-280q0 23-5.5 42T220-202q5 2 10 2h10Zm230-160L360-470l358-358q11-11 27.5-11.5T774-828l54 54q12 12 12 28t-12 28L470-360Zm-190 80Z"/></svg>
+                            <div>
+                                <h3>Skills</h3>
+                                <ul>
+                                    <li>Programming language: Python, SQL</li>
+                                    <li>Frontend-development: HTML, CSS, Javascript</li>
+                                    <li>Experienced in Microsoft office suite, Microsoft workspace and PowerBI</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="education">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20%" viewBox="0 -960 960 960" width="20%" fill="black"><path d="M320-160q-33 0-56.5-23.5T240-240v-120h120v-90q-35-2-66.5-15.5T236-506v-44h-46L60-680q36-46 89-65t107-19q27 0 52.5 4t51.5 15v-55h480v520q0 50-35 85t-85 35H320Zm120-200h240v80q0 17 11.5 28.5T720-240q17 0 28.5-11.5T760-280v-440H440v24l240 240v56h-56L510-514l-8 8q-14 14-29.5 25T440-464v104ZM224-630h92v86q12 8 25 11t27 3q23 0 41.5-7t36.5-25l8-8-56-56q-29-29-65-43.5T256-684q-20 0-38 3t-36 9l42 42Zm376 350H320v40h286q-3-9-4.5-19t-1.5-21Zm-280 40v-40 40Z"/></svg>
+                            <div>
+                                <h3>Education</h3>
+                                <ul>
+                                <li><h5>Bachelor of Science in Software Engineering</h5></li>
+                                <p>African Leadership University</p>
+                                <li><h5>Data Science certificate</h5></li>
+                                <p>ALX</p>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="experience">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20%" viewBox="0 -960 960 960" width="20%" fill="black"><path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z"/></svg>
+                            <div>
+                                <h3>Experience</h3>
+                                <ul>
+                                    <li>Gained hands-on experience in data preparation, regression analysis, and creating insightful visualizations to support decision-making.</li>
+                                    <li>Developed skills in structuring and optimizing datasets for efficient querying and analysis.</li>
+                                    <li>Enhanced ability to design user-friendly interfaces and build functional web applications.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Projects">
+                    <h3>Projects</h3>
+                    <div class="collection">
+                    <div>
+                        <img src="images/maji4.png" alt="maji ndogo report">
+                        <p class="cover">This project analyzed water distribution patterns to identify key trends using SQL, Python and PowerBI to support data-driven decision-making for addressing the Maji Ndogo water crisis.</p>
+                        <p>Maji Ndogo Report</p>
+                    </div>
+                    <div>
+                        <img src="images/w11.jpg" alt="food delivery service">
+                        <p class="cover">This project focused on developing a food delivery website that connects users with local restaurants for seamless ordering. </p>
+                        <p>Food delivery site</p>
+                    </div>
+                    <div>
+                        <img src="images/job-scheduling-min.png" alt="job manager app">
+                        <p class="cover">This project involves developing a Freelance Job Manager App to help creative professionals manage client management, project tracking, and financial monitoring.</p>
+                        <p>Freelance Job Manager</p>
+                    </div>
+                </div>
+                </div>
+                <div id="Contact">
+                    <div id="socials">
+                        <h3>Contact me</h3>
+                        <p>a.hirwa1@alustudent.com</p>
+                        <a class="accounts"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a class="accounts"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                    <form>
+                        <input type="text" placeholder="Your name"required>
+                        <input type="text" placeholder="Your email"required>
+                        <textarea placeholder="Your message"></textarea>
+                        <button id="Submit">Submit</button>
+                    </form>
+                </div>
+            </main>
+            <footer>
+                <p>Copyright &copy; Ariane 2025</p>
+            </footer>
+        </div>
+    </body>
+</html>
