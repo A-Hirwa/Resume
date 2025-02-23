@@ -172,10 +172,9 @@ header ul a:hover{
 }
 
 #group, #education div, #experience div{
-    background-color: #eaf9d9e0;
-    color: #03191e;
+    border-bottom: 3px #EF8354 solid;
+    color: white;
     width: 100%;
-    border-radius: 20px;
     animation: text-slide linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
@@ -215,6 +214,9 @@ header ul a:hover{
     flex-wrap: wrap;
 }
 
+#experience div h4{
+    margin-bottom: 0px;
+}
 
 @keyframes appear{
     from{
